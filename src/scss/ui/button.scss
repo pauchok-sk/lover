@@ -1,0 +1,51 @@
+.btn-reset {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+.btn-s {
+  @include flex-center;
+  padding: 20px 30px;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  box-shadow:
+    inset 0 -0px 1px 0 #04062b,
+    inset 0 -2px 2px 1px rgba(11, 14, 81, 0.47),
+    inset 0 6px 5px 0 rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    180deg,
+    #1875dc 33.76%,
+    #2280e7 52.17%,
+    #116ed6 69.67%
+  );
+
+  transition: opacity 0.2s ease;
+
+  @include pressed {
+    opacity: 0.8;
+  }
+  &[disabled] {
+    background: var(--primary-dark);
+    pointer-events: none;
+
+    span {
+      text-shadow: 0 0 4px rgba(202, 217, 255, 0.32), 0 0 25px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+
+  span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    background: linear-gradient(180deg, #d5e9ff 35.34%, #fff 82.1%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+}

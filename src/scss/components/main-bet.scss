@@ -1,0 +1,79 @@
+.main-bet {
+  padding: 56px 0px;
+  &__card {
+    border-radius: 31px;
+    box-shadow: inset 0 2px 0 0 #3995ff;
+    background-color: var(--neutral-1000) !important;
+  }
+  &__gallery {
+    @include flex-center;
+    min-height: 250px;
+  }
+  &__body {
+    padding: 8px;
+  }
+  &__id {
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    background: var(--neutral-900);
+    text-align: center;
+  }
+  &__info-item {
+    flex: 0 1 102px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__counters {
+    @include flex-between;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 6px;
+    z-index: 1;
+    background-color: #161616;
+    border-radius: 12px;
+  
+    &::before {
+      position: absolute;
+      content: "";
+      border-radius: 12px;
+      top: 0;
+      bottom: 0;
+      right: 75px;
+      left: 0;
+      background-color: var(--neutral-900);
+      z-index: -1;
+    }
+  }
+  &__counter {
+    text-align: center;
+    min-width: 80px;
+    padding: 4px 0px;
+    border-radius: 6px;
+
+    &._active {
+      background: var(--primary-400);
+      
+      div {
+        mix-blend-mode: screen;
+      }
+    }
+
+    &[disabled] {
+      background-color: var(--primary-500);
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 4px;
+    margin-top: 25px;
+
+    .btn-s {
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.head-profile {
+  &__avatar {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__notifications {
+    position: relative;
+    width: 32px;
+    height: 32px;
+
+    transition: color .2s ease;
+
+    @include pressed {
+      color: var(--primary-400);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__notifications-num {
+    @include flex-center;
+    position: absolute;
+    top: -6px;
+    right: -18px;
+    background-color: var(--neutra-1000);
+
+    width: 26px;
+    height: 20px;
+    border-radius: 20px;
+
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 123%;
+    letter-spacing: -0.01em;
+  }
+  &__sum-btn {
+    display: flex;
+    align-items: center;
+    background-color: rgba(22, 117, 219, 0.15);
+    border-radius: 12px;
+    padding: 8px;
+    gap: 2px;
+
+    transition: background-color .2s ease;
+
+    @include pressed {
+      background-color: rgba(22, 117, 219, 0.35);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
