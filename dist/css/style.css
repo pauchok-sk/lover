@@ -151,11 +151,13 @@ template {
   --primary-400: #006ee4;
   --primary-300: #2990ff;
   --primary-dark: #053c79;
+  --dark: #212121;
   --neutral-1000: #121314;
   --neutral-900: #1b2025;
   --neutral-800: #546c84;
   --neutral-500: #5995d2;
   --neutral-200: #c2dffc;
+  --hint: #aaa;
   --red: #9e242f;
   --red-l: #e03e4c;
   --green: #1a9547;
@@ -218,6 +220,27 @@ img {
   -webkit-filter: blur(90px);
   filter: blur(90px);
   z-index: -1
+}
+.body._top-bg {
+  overflow: hidden
+}
+.body._top-bg::before {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  background-color: var(--primary-400);
+  -webkit-filter: blur(130px);
+  filter: blur(130px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 460px;
+  height: 265px;
+  top: -170px;
+  z-index: -1
+}
+.body._top-bg::after {
+  background-position: top -130px center
 }
 :root {
   --offset-width: 15px;
@@ -288,6 +311,11 @@ img {
   margin: 0;
   list-style: none
 }
+.h-5 {
+  font-size: 24px;
+  line-height: 150%;
+  margin: 0
+}
 .hl-text {
   font-size: 19px;
   line-height: 126%;
@@ -321,6 +349,109 @@ img {
 }
 .text-red-l {
   color: var(--red-l)
+}
+.text-hint {
+  color: var(--hint)
+}
+.text-green {
+  color: var(--green)
+}
+.text-green-l {
+  color: var(--green-l)
+}
+.text-red {
+  color: var(--red)
+}
+.text-red-l {
+  color: var(--red-l)
+}
+.text-dark {
+  color: var(--dark)
+}
+.card-bet {
+  border-radius: 20px;
+  padding: 8px;
+  width: 100%;
+  background-color: var(--neutral-1000)
+}
+.card-bet._green {
+  background: rgba(124,221,99,.15)
+}
+.card-bet._green .card-bet__id {
+  background: #2e4134
+}
+.card-bet._green .card-bet__counters {
+  background-color: rgba(0,0,0,0)
+}
+.card-bet._green .card-bet__counters::before {
+  background: rgba(128,227,152,.4)
+}
+.card-bet._red {
+  background: rgba(158,36,47,.4)
+}
+.card-bet._red .card-bet__id {
+  background: #5a2e38
+}
+.card-bet._red .card-bet__counters {
+  background-color: rgba(0,0,0,0)
+}
+.card-bet._red .card-bet__counters::before {
+  background: rgba(255,79,75,.4)
+}
+.card-bet__id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,.05);
+  background-color: var(--neutral-900);
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 1 105px
+}
+.card-bet__time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 1 105px
+}
+.card-bet__time svg {
+  width: 24px;
+  height: 24px
+}
+.card-bet__counters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 6px;
+  z-index: 1;
+  background-color: #161616;
+  border-radius: 12px
+}
+.card-bet__counters::before {
+  position: absolute;
+  content: "";
+  border-radius: 12px;
+  top: 0;
+  bottom: 0;
+  right: 75px;
+  left: 0;
+  background-color: var(--neutral-900);
+  z-index: -1
+}
+.card-bet__counter {
+  text-align: center;
+  min-width: 80px;
+  padding: 4px 0;
+  border-radius: 6px
+}
+.card-bet__counter._active-green {
+  background-color: rgba(64,237,127,.8)
+}
+.card-bet__counter._active-red {
+  background: rgba(224,62,76,.8)
 }
 .head-profile {
   padding-top: 35px
@@ -518,6 +649,27 @@ img {
 }
 .loader__logo {
   margin-top: 56px
+}
+.s-bets {
+  padding: 35px 0
+}
+.s-bets__filters-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: var(--neutral-900);
+  width: 50px;
+  height: 35px;
+  color: var(--primary-300);
+  transition: background-color .2s ease
+}
+.s-bets__filters-btn:active {
+  background-color: var(--neutral-1000)
+}
+.s-bets__filters-btn svg {
+  width: 20px;
+  height: 20px
 }
 .tab-bar {
   position: fixed;

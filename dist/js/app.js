@@ -191,4 +191,8 @@
         }
     }
     spoller();
+    document.addEventListener("DOMContentLoaded", function() {
+        var myModal = new bootstrap.Modal(document.getElementById("filters-modal"));
+        myModal.show();
+    });
 })();

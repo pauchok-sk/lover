@@ -1,0 +1,23 @@
+.s-bets {
+  padding: 35px 0px;
+  &__filters-btn {
+    @include flex-center;
+    border-radius: 12px;
+    background-color: var(--neutral-900);
+    width: 50px;
+    height: 35px;
+
+    color: var(--primary-300);
+
+    transition: background-color .2s ease;
+
+    @include pressed {
+      background-color: var(--neutral-1000);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

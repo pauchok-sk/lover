@@ -1,0 +1,88 @@
+.card-bet {
+  border-radius: 20px;
+  padding: 8px;
+  width: 100%;
+  background-color: var(--neutral-1000);
+
+  &._green {
+    background: rgba(124, 221, 99, 0.15);
+
+    .card-bet__id {
+      background: #2e4134;
+    }
+    .card-bet__counters {
+      background-color: transparent;
+      &::before {
+        background: rgba(128, 227, 152, 0.4);
+      }
+    }
+  }
+  &._red {
+    background: rgba(158, 36, 47, 0.4);
+
+    .card-bet__id {
+      background: #5a2e38;
+    }
+    .card-bet__counters {
+      background-color: transparent;
+      &::before {
+        background: rgba(255, 79, 75, 0.4);
+      }
+    }
+  }
+
+  &__id {
+    @include flex-center;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    background-color: var(--neutral-900);
+    border-radius: 10px;
+    padding: 10px;
+    flex: 0 1 105px;
+  }
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 0 1 105px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__counters {
+    @include flex-between;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 6px;
+    z-index: 1;
+    background-color: #161616;
+    border-radius: 12px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-radius: 12px;
+      top: 0;
+      bottom: 0;
+      right: 75px;
+      left: 0;
+      background-color: var(--neutral-900);
+      z-index: -1;
+    }
+  }
+  &__counter {
+    text-align: center;
+    min-width: 80px;
+    padding: 4px 0px;
+    border-radius: 6px;
+
+    &._active-green {
+      background-color: rgba(64, 237, 127, 0.8);
+    }
+    &._active-red {
+      background: rgba(224, 62, 76, 0.8);
+    }
+  }
+}
