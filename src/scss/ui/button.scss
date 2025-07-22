@@ -33,7 +33,43 @@
     pointer-events: none;
 
     span {
-      text-shadow: 0 0 4px rgba(202, 217, 255, 0.32), 0 0 25px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5) !important;
+      text-shadow:
+        0 0 4px rgba(202, 217, 255, 0.32),
+        0 0 25px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+  &._red {
+    background: radial-gradient(50% 50% at 50% 50%, #9e242f 0%, #e03e4c 100%);
+    box-shadow:
+      inset 0 0 0 1px rgba(111, 115, 230, 0.22),
+      inset 0 0 15px 0 rgba(0, 0, 0, 0.25),
+      inset 0 0 4px 0 rgba(0, 0, 0, 0.56);
+
+    span {
+      text-shadow:
+        0 0 4px rgba(202, 217, 255, 0.32),
+        0 0 25px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+  &._green {
+    box-shadow:
+      inset 0 0 0 1px rgba(111, 115, 230, 0.22),
+      inset 0 0 15px 0 rgba(0, 0, 0, 0.25),
+      inset 0 0 4px 0 rgba(0, 0, 0, 0.56);
+
+    background: radial-gradient(
+      76.73% 50% at 50% 50%,
+      #1a9547 0%,
+      #40ed7f 100%
+    );
+
+    span {
+      text-shadow:
+        0 0 4px rgba(202, 217, 255, 0.32),
+        0 0 25px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.5) !important;
     }
   }
 
