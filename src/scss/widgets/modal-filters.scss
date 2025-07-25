@@ -1,0 +1,14 @@
+.modal-filters {
+  &__wrapper {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    row-gap: 30px;
+    margin-bottom: 32px;
+  }
+  &__item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

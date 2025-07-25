@@ -2,19 +2,19 @@
 	<div class="container">
 		<div class="d-flex align-items-center justify-content-between gap-2 mb-4">
 			<h1 class="h-5 fw-bold">Ставки</h1>
-			<div class="s-bets__filters-btn">
+			<div class="s-bets__filters-btn" data-bs-toggle="modal" data-bs-target="#filters-modal">
 				<svg>
 					<use xlink:href="img/icons/icons.svg#icon-burger"></use>
 				</svg>
 			</div>
 		</div>
 		<div class="d-flex flex-column gap-3">
-			<div class="card-bet">
+			<div data-bs-toggle="modal" data-bs-target="#bet-modal-even" class="card-bet">
 				<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
 					<div class="card-bet__id caption text-neutral-800">№892345</div>
 					<div class="hl-text fw-semibold text-neutral-200">$230</div>
-					<div class="card-bet__time sub-hl-text text-neutral-200 fw-semibold">
-						<span class="d-block ms-start">21h:49m</span>
+					<div class="timer">
+						<span>21h:49m</span>
 						<svg>
 							<use xlink:href="img/icons/icons.svg#icon-timer"></use>
 						</svg>
@@ -35,14 +35,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-bet _green">
+			<div class="card-bet _green" data-bs-toggle="modal" data-bs-target="#bet-modal-win">
 				<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
 					<div class="card-bet__id caption text-neutral-800">№892345</div>
 					<div class="hl-text fw-semibold text-neutral-200 text-green-l">
 						$230
 					</div>
-					<div class="card-bet__time sub-hl-text text-neutral-200 fw-semibold">
-						<span class="d-block ms-start">21h:49m</span>
+					<div class="timer">
+						<span>21h:49m</span>
 						<svg>
 							<use xlink:href="img/icons/icons.svg#icon-timer"></use>
 						</svg>
@@ -63,14 +63,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-bet _red">
+			<div class="card-bet _red" data-bs-toggle="modal" data-bs-target="#bet-modal-loss">
 				<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
 					<div class="card-bet__id caption text-neutral-800">№892345</div>
 					<div class="hl-text fw-semibold text-neutral-200 text-red-l">
 						$230
 					</div>
-					<div class="card-bet__time sub-hl-text text-neutral-200 fw-semibold">
-						<span class="d-block ms-start">21h:49m</span>
+					<div class="timer">
+						<span>21h:49m</span>
 						<svg>
 							<use xlink:href="img/icons/icons.svg#icon-timer"></use>
 						</svg>
@@ -91,12 +91,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-bet">
+			<div class="card-bet" data-bs-toggle="modal" data-bs-target="#bet-modal">
 				<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
 					<div class="card-bet__id caption text-neutral-800">№892345</div>
 					<div class="hl-text fw-semibold text-neutral-200">ZERO</div>
-					<div class="card-bet__time sub-hl-text text-neutral-200 fw-semibold">
-						<span class="d-block ms-start">21h:49m</span>
+					<div class="timer">
+						<span>21h:49m</span>
 						<svg>
 							<use xlink:href="img/icons/icons.svg#icon-timer"></use>
 						</svg>
@@ -117,12 +117,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-bet">
+			<div data-bs-toggle="modal" data-bs-target="#bet-modal-even" class="card-bet">
 				<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
 					<div class="card-bet__id caption text-neutral-800">№892345</div>
 					<div class="hl-text fw-semibold text-neutral-200">$230</div>
-					<div class="card-bet__time sub-hl-text text-neutral-200 fw-semibold">
-						<span class="d-block ms-start">21h:49m</span>
+					<div class="timer">
+						<span>21h:49m</span>
 						<svg>
 							<use xlink:href="img/icons/icons.svg#icon-timer"></use>
 						</svg>
@@ -143,14 +143,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-bet _green">
+			<div class="card-bet _green" data-bs-toggle="modal" data-bs-target="#bet-modal-win">
 				<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
 					<div class="card-bet__id caption text-neutral-800">№892345</div>
 					<div class="hl-text fw-semibold text-neutral-200 text-green-l">
 						$230
 					</div>
-					<div class="card-bet__time sub-hl-text text-neutral-200 fw-semibold">
-						<span class="d-block ms-start">21h:49m</span>
+					<div class="timer">
+						<span>21h:49m</span>
 						<svg>
 							<use xlink:href="img/icons/icons.svg#icon-timer"></use>
 						</svg>
@@ -171,14 +171,14 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-bet _red">
+			<div class="card-bet _red" data-bs-toggle="modal" data-bs-target="#bet-modal-loss">
 				<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
 					<div class="card-bet__id caption text-neutral-800">№892345</div>
 					<div class="hl-text fw-semibold text-neutral-200 text-red-l">
 						$230
 					</div>
-					<div class="card-bet__time sub-hl-text text-neutral-200 fw-semibold">
-						<span class="d-block ms-start">21h:49m</span>
+					<div class="timer">
+						<span>21h:49m</span>
 						<svg>
 							<use xlink:href="img/icons/icons.svg#icon-timer"></use>
 						</svg>
@@ -199,12 +199,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="card-bet">
+			<div class="card-bet" data-bs-toggle="modal" data-bs-target="#bet-modal">
 				<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
 					<div class="card-bet__id caption text-neutral-800">№892345</div>
 					<div class="hl-text fw-semibold text-neutral-200">ZERO</div>
-					<div class="card-bet__time sub-hl-text text-neutral-200 fw-semibold">
-						<span class="d-block ms-start">21h:49m</span>
+					<div class="timer">
+						<span>21h:49m</span>
 						<svg>
 							<use xlink:href="img/icons/icons.svg#icon-timer"></use>
 						</svg>

@@ -6,8 +6,8 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="./files/bootstrap/bootstrap.min.css?_v=20250723104504" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20250723104504" />
+	<link rel="stylesheet" href="./files/bootstrap/bootstrap.min.css?_v=20250725135104" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250725135104" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -95,19 +95,419 @@
 			</section>
 
 		</main>
-		<div class="modal" tabindex="-1" id="filters-modal">
-			<div class="modal-dialog">
+		<div class="modal modal-filters fade" id="filters-modal">
+			<div class="modal-dialog modal-dialog-bottom">
 				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Modal title</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
+					<form action="#">
+						<div class="modal-body">
+							<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+								<h3 class="h-6 fw-medium">Фильтры</h3>
+								<div data-bs-dismiss="modal" class="modal-close ms-auto">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#icon-close"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="modal-filters__wrapper">
+								<div class="modal-filter__item">
+									<h5 class="h-7 fw-medium mb-3 text-neutral-800">Статус</h5>
+									<div class="modal-filters__item-wrapper">
+										<input type="checkbox" id="status-all" class="input-check" />
+										<label for="status-all" class="label-check">Все</label>
+										<input type="checkbox" id="status-win" checked class="input-check" />
+										<label for="status-win" class="label-check">Выиграл</label>
+										<input type="checkbox" id="status-loss" class="input-check" />
+										<label for="status-loss" class="label-check">Проиграл</label>
+									</div>
+								</div>
+								<div class="modal-filter__item">
+									<h5 class="h-7 fw-medium mb-3 text-neutral-800">
+										Ставка сыграла
+									</h5>
+									<div class="modal-filters__item-wrapper">
+										<input type="checkbox" id="played-all" class="input-check" />
+										<label for="played-all" class="label-check">Все</label>
+										<input type="checkbox" id="played-even" class="input-check" />
+										<label for="played-even" class="label-check">Чет</label>
+										<input type="checkbox" id="played-odd" class="input-check" />
+										<label for="played-odd" class="label-check">Нечет</label>
+										<input type="checkbox" checked id="played-zero" class="input-check" />
+										<label for="played-zero" class="label-check">Zero</label>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn-s w-100">
+								<span>Применить</span>
+							</button>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn-dark w-100">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-arrow-prev"></use>
+								</svg>
+								<span>Сбросить</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-filters fade" id="bet-modal">
+			<div class="modal-dialog modal-dialog-bottom">
+				<div class="modal-content">
 					<div class="modal-body">
-						<p>Modal body text goes here.</p>
+						<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+							<div data-bs-dismiss="modal" class="modal-close ms-auto">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-close"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+							<div class="el-id">№892345</div>
+							<div class="hl-text text-primary-300 fw-bold">$23000</div>
+							<div class="timer">
+								<span>21h:49m</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-timer"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="counters mb-4">
+							<div class="counter _active">
+								<div class="counter__value">60%</div>
+								<div class="counter__title">НЕЧЕТ</div>
+							</div>
+							<div class="counter">
+								<div class="counter__value">12 456</div>
+								<div class="counter__title">ВСЕГО</div>
+							</div>
+							<div class="counter">
+								<div class="counter__value">40%</div>
+								<div class="counter__title">нечет</div>
+							</div>
+						</div>
+						<div class="d-flex align-items-center jusify-content-between gap-3 mb-4">
+							<div>
+								<div class="caption text-neutral-800 mb-1 text-uppercase">хэш</div>
+								<div class="caption text-break">
+									yS3WaztAm9TH8U6XwsfEpLB5Gv7MxJZD4hgbQjCVkP2rdcuYq
+								</div>
+							</div>
+							<a href="#" class="btn-simple">Проверить</a>
+						</div>
+						<div>
+							<div class="caption text-neutral-800 mb-3 text-uppercase">
+								Выигрыши
+							</div>
+							<div class="d-flex flex-column gap-2">
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-filters fade" id="bet-modal-even">
+			<div class="modal-dialog modal-dialog-bottom">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+							<div data-bs-dismiss="modal" class="modal-close ms-auto">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-close"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+							<div class="el-id">№892345</div>
+							<div class="hl-text text-primary-300 fw-bold">$23000</div>
+							<div class="timer">
+								<span>21h:49m</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-timer"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="counters mb-4">
+							<div class="counter _active">
+								<div class="counter__value">60%</div>
+								<div class="counter__title">НЕЧЕТ</div>
+							</div>
+							<div class="counter">
+								<div class="counter__value">12 456</div>
+								<div class="counter__title">ВСЕГО</div>
+							</div>
+							<div class="counter">
+								<div class="counter__value">40%</div>
+								<div class="counter__title">нечет</div>
+							</div>
+						</div>
+						<div class="bet-placed mb-4 _active">
+							<div>
+								<div class="caption mb-2 text-primary-300">Ваша ставка</div>
+								<div class="sub-hl-text text-primary-300 fw-semibold">10$</div>
+								<div class="sub-hl-text text-neutral-100 fw-semibold">на ЧЕТНОЕ</div>
+							</div>
+							<div class="sub-hl-text text-right ms-auto text-primary-300 fw-semibold">Ставка сделана</div>
+						</div>
+						<div class="d-flex align-items-center jusify-content-between gap-3 mb-4">
+							<div>
+								<div class="caption text-neutral-800 mb-1 text-uppercase">хэш</div>
+								<div class="caption text-break">
+									yS3WaztAm9TH8U6XwsfEpLB5Gv7MxJZD4hgbQjCVkP2rdcuYq
+								</div>
+							</div>
+							<a href="#" class="btn-simple">Проверить</a>
+						</div>
+						<div>
+							<div class="caption text-neutral-800 mb-3 text-uppercase">
+								Выигрыши
+							</div>
+							<div class="d-flex flex-column gap-2">
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-filters fade" id="bet-modal-win">
+			<div class="modal-dialog modal-dialog-bottom">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+							<div data-bs-dismiss="modal" class="modal-close ms-auto">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-close"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+							<div class="el-id">№892345</div>
+							<div class="hl-text text-green-l fw-bold">$23000</div>
+							<div class="timer text-neutral-500">
+								<span>12 Ноя</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="counters mb-4">
+							<div class="counter _active-green">
+								<div class="counter__value">60%</div>
+								<div class="counter__title">НЕЧЕТ</div>
+							</div>
+							<div class="counter">
+								<div class="counter__value">12 456</div>
+								<div class="counter__title">ВСЕГО</div>
+							</div>
+							<div class="counter">
+								<div class="counter__value">40%</div>
+								<div class="counter__title">нечет</div>
+							</div>
+						</div>
+						<div class="bet-placed mb-4 _active-green">
+							<div>
+								<div class="caption mb-2 opacity-50 text-opacity">Ваша ставка</div>
+								<div class="sub-hl-text text-green-l fw-semibold">10$</div>
+								<div class="sub-hl-text text-neutral-100 fw-semibold">на ЧЕТНОЕ</div>
+							</div>
+							<div class="sub-hl-text text-right ms-auto text-green-l fw-semibold">ВЫИГРЫШ</div>
+						</div>
+						<div class="d-flex align-items-center jusify-content-between gap-3 mb-4">
+							<div>
+								<div class="caption text-neutral-800 mb-1 text-uppercase">хэш</div>
+								<div class="caption text-break">
+									yS3WaztAm9TH8U6XwsfEpLB5Gv7MxJZD4hgbQjCVkP2rdcuYq
+								</div>
+							</div>
+							<a href="#" class="btn-simple">Проверить</a>
+						</div>
+						<div>
+							<div class="caption text-neutral-800 mb-3 text-uppercase">
+								Выигрыши
+							</div>
+							<div class="d-flex flex-column gap-2">
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal modal-filters fade" id="bet-modal-loss">
+			<div class="modal-dialog modal-dialog-bottom">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+							<div data-bs-dismiss="modal" class="modal-close ms-auto">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-close"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="d-flex align-items-center justify-content-between gap-3 mb-4">
+							<div class="el-id">№892345</div>
+							<div class="hl-text text-red-l fw-bold">$23000</div>
+							<div class="timer text-neutral-500">
+								<span>12 Ноя</span>
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="counters mb-4">
+							<div class="counter _active-red">
+								<div class="counter__value">60%</div>
+								<div class="counter__title">НЕЧЕТ</div>
+							</div>
+							<div class="counter">
+								<div class="counter__value">12 456</div>
+								<div class="counter__title">ВСЕГО</div>
+							</div>
+							<div class="counter">
+								<div class="counter__value">40%</div>
+								<div class="counter__title">нечет</div>
+							</div>
+						</div>
+						<div class="bet-placed mb-4 _active-red">
+							<div>
+								<div class="caption mb-2 opacity-50 text-opacity">Ваша ставка</div>
+								<div class="sub-hl-text text-red-l fw-semibold">10$</div>
+								<div class="sub-hl-text text-neutral-100 fw-semibold">на ЧЕТНОЕ</div>
+							</div>
+							<div class="sub-hl-text text-right ms-auto text-red-l fw-semibold">ПРОИГРЫШ</div>
+						</div>
+						<div class="d-flex align-items-center jusify-content-between gap-3 mb-4">
+							<div>
+								<div class="caption text-neutral-800 mb-1 text-uppercase">хэш</div>
+								<div class="caption text-break">
+									yS3WaztAm9TH8U6XwsfEpLB5Gv7MxJZD4hgbQjCVkP2rdcuYq
+								</div>
+							</div>
+							<a href="#" class="btn-simple">Проверить</a>
+						</div>
+						<div>
+							<div class="caption text-neutral-800 mb-3 text-uppercase">
+								Выигрыши
+							</div>
+							<div class="d-flex flex-column gap-2">
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+								<div class="card-played">
+									<div class="d-flex align-items-center gap-1">
+										<img src="img/smile.svg" alt="image" />
+										<span class="sub-hl-text">@Username</span>
+									</div>
+									<div class="sub-hl-text text-green-l ms-auto">$100</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -141,9 +541,9 @@
 			</div>
 		</footer>
 
-		<script src="./files/bootstrap/bootstrap.min.js?_v=20250723104504"></script>
+		<script src="./files/bootstrap/bootstrap.min.js?_v=20250725135104"></script>
 
-		<script src="js/app.min.js?_v=20250723104504"></script>
+		<script src="js/app.min.js?_v=20250725135104"></script>
 	</div>
 </body>
 

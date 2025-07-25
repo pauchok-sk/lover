@@ -3,6 +3,15 @@
   line-height: 150%;
   margin: 0;
 }
+.h-6 {
+  font-size: 20px;
+  line-height: 150%;
+}
+.h-7 {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.06em;
+}
 
 .hl-text {
   font-size: 19px;
@@ -18,11 +27,14 @@
   font-size: 13px;
   line-height: 123%;
   letter-spacing: -0.01em;
-  text-transform: uppercase;
 }
 
 .fw-600 {
   font-weight: 600 !important;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
 }
 
 .text-primary-300 {
@@ -30,13 +42,19 @@
 }
 
 .text-neutral-800 {
-  color: var(--neutral-800);
+  color: var(--neutral-800) !important;
+}
+.text-neutral-600 {
+  color: var(--neutral-600) !important;
 }
 .text-neutral-500 {
-  color: var(--neutral-500);
+  color: var(--neutral-500) !important;
 }
 .text-neutral-200 {
-  color: var(--neutral-200);
+  color: var(--neutral-200) !important;
+}
+.text-neutral-100 {
+  color: var(--neutral-100) !important;
 }
 
 .text-red-l {
@@ -62,4 +80,14 @@
 
 .text-dark {
   color: var(--dark);
+}
+
+.text-break {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.text-opacity {
+  color: rgba(223, 255, 235, 0.9) !important;
+  mix-blend-mode: color-dodge;
 }

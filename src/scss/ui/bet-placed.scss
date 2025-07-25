@@ -1,0 +1,16 @@
+.bet-placed {
+  @include flex-between;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--neutral-900);
+
+  &._active {
+    background-color: rgba(22, 117, 219, 0.15);
+  }
+  &._active-green {
+    background: rgba(26, 149, 71, 0.15);
+  }
+  &._active-red {
+    background: rgba(158, 36, 47, 0.15);
+  }
+}

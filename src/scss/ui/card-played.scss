@@ -1,0 +1,6 @@
+.card-played {
+  @include flex-between;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--neutral-900);
+}

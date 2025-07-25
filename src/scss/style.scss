@@ -11,6 +11,14 @@
 @import "./ui/list";
 @import "./ui/text";
 @import "./ui/card-bet";
+@import "./ui/form";
+@import "./ui/mini-ui";
+@import "./ui/card-played";
+@import "./ui/bet-placed";
+
+// widgets
+@import "./widgets/modal";
+@import "./widgets/modal-filters";
 
 // components
 @import "./components/header";
