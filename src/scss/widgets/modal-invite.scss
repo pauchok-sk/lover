@@ -1,0 +1,37 @@
+.modal-invite {
+  &__stars {
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &__body {
+    @include flex-between;
+    gap: 12px;
+    padding: 11px 16px;
+    background: var(--neutral-900);
+    border-radius: 13px;
+  }
+  &__modal-btn {
+    @include flex-center;
+    cursor: pointer;
+    background-color: rgba(22, 117, 219, 0.15);
+    border: none;
+    outline: none;
+    padding: 6px 19px;
+    border-radius: 10px;
+    flex-shrink: 0;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.06em;
+    color: var(--primary-300);
+
+    transition: background-color .2s ease, color .2s ease;
+    @include hover {
+      color: white;
+      background-color: rgba(22, 117, 219, 1);
+    }
+  }
+}

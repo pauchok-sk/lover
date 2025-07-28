@@ -759,6 +759,37 @@ textarea.input {
   flex-wrap: wrap;
   gap: 16px
 }
+.modal-invite__stars svg {
+  width: 18px;
+  height: 18px
+}
+.modal-invite__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 16px;
+  background: var(--neutral-900);
+  border-radius: 13px
+}
+.modal-invite__modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: rgba(22,117,219,.15);
+  border: none;
+  outline: 0;
+  padding: 6px 19px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -.06em;
+  color: var(--primary-300);
+  transition: background-color .2s ease,color .2s ease
+}
 .head-profile {
   padding-top: 35px
 }
@@ -1217,8 +1248,15 @@ textarea.input {
   .btn-simple:hover {
     color: var(--primary-400)
   }
+  .text-b-2 a:hover {
+    text-decoration: underline
+  }
   .modal-close:hover {
     opacity: .7
+  }
+  .modal-invite__modal-btn:hover {
+    color: #fff;
+    background-color: #1675db
   }
   .s-profile__nav-btn:hover {
     box-shadow: 0 3px 1px 0 rgba(0,0,0,.04),0 3px 8px 0 rgba(0,0,0,.12);
@@ -1237,8 +1275,15 @@ textarea.input {
   .btn-simple:active {
     color: var(--primary-400)
   }
+  .text-b-2 a:active {
+    text-decoration: underline
+  }
   .modal-close:active {
     opacity: .7
+  }
+  .modal-invite__modal-btn:active {
+    color: #fff;
+    background-color: #1675db
   }
   .s-profile__nav-btn:active {
     box-shadow: 0 3px 1px 0 rgba(0,0,0,.04),0 3px 8px 0 rgba(0,0,0,.12);
