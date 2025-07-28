@@ -3,7 +3,7 @@
 
   &:checked + label {
     &::before {
-      background: url('@img/check.svg') center / 12px auto no-repeat;
+      background: url("@img/check.svg") center / 12px auto no-repeat;
       background-color: var(--primary-300);
       border-color: var(--primary-300);
     }
@@ -26,4 +26,45 @@
     border-radius: 6px;
     border: 2px solid var(--neutral-900);
   }
+}
+
+.input-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &._icon {
+    .input {
+      padding-right: 52px !important;
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    color: var(--neutral-700);
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--neutral-900);
+  border: none;
+  outline: none;
+  border-radius: 12px;
+
+  font-size: 17px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  color: var(--neutral-800);
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+textarea.input {
+  resize: none;
 }
