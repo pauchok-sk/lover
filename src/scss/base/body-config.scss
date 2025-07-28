@@ -18,30 +18,25 @@
       display: block;
       background: url("@img/bg-light-blur-center.jpg") top 0 center / 100% auto
         no-repeat;
-      // inset: -20px 0px 0px 0px;
-      // opacity: 0.4;
-      // filter: blur(3px);
       inset: 0;
       z-index: -2;
     }
   }
   &._top-bg {
-    overflow: hidden;
-
     &::after {
       position: absolute;
       content: "";
       display: block;
       background: url("@img/bg-light-blur.jpg") top 0 center / 100% auto
         no-repeat;
-      // inset: -20px 0px 0px 0px;
-      // opacity: 0.4;
-      // filter: blur(3px);
       inset: 0;
       z-index: -2;
     }
   }
   &._bottom-logout {
     padding-bottom: 100px;
+  }
+  &._dark {
+    background-color: var(--secondary-dark);
   }
 }

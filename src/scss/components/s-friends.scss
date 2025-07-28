@@ -1,0 +1,61 @@
+.s-friends {
+  padding-bottom: 140px;
+  &__body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    background: var(--neutral-900);
+    border-radius: 12px;
+    margin-bottom: 18px;
+  }
+  &__stars {
+    display: flex;
+    align-items: start;
+    gap: 2px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &__stars-get {
+    padding: 9px 28px;
+    background-color: rgba(22, 117, 219, 0.15);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.06em;
+    color: var(--primary-300);
+
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+
+    @include hover {
+      color: white;
+      background-color: rgba(22, 117, 219, 1);
+    }
+  }
+  &__invite {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 58px;
+    width: 100%;
+    backdrop-filter: blur(44px);
+    background: var(--neutral-1000);
+    padding: 16px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  &__invite-btn {
+    width: 100%;
+  }
+}

@@ -147,6 +147,7 @@ template {
   display: none
 }
 :root {
+  --secondary-dark: #0f0f0f;
   --secondary: #aacaff;
   --primary-500: #004da1;
   --primary-400: #006ee4;
@@ -203,9 +204,6 @@ img {
   inset: 0;
   z-index: -2
 }
-.body._top-bg {
-  overflow: hidden
-}
 .body._top-bg::after {
   position: absolute;
   content: "";
@@ -216,6 +214,9 @@ img {
 }
 .body._bottom-logout {
   padding-bottom: 100px
+}
+.body._dark {
+  background-color: var(--secondary-dark)
 }
 :root {
   --offset-width: 15px;
@@ -344,10 +345,20 @@ img {
   line-height: 150%;
   letter-spacing: -.06em
 }
+.title-1 {
+  font-size: 28px;
+  line-height: 121%;
+  letter-spacing: .01em
+}
 .title-2 {
   font-size: 24px;
   line-height: 117%;
   letter-spacing: 0
+}
+.text {
+  font-size: 17px;
+  line-height: 129%;
+  letter-spacing: -.02em
 }
 .hl-text {
   font-size: 19px;
@@ -680,6 +691,10 @@ textarea.input {
   border-radius: 20px;
   background: var(--neutral-900)
 }
+.card-played__icon {
+  width: 18px;
+  height: 18px
+}
 .bet-placed {
   display: flex;
   align-items: center;
@@ -963,7 +978,8 @@ textarea.input {
   height: 20px
 }
 .s-profile {
-  padding-top: 35px
+  padding-top: 35px;
+  padding-bottom: 16px
 }
 .s-profile__avatar {
   width: 96px;
@@ -1092,7 +1108,8 @@ textarea.input {
   padding: 16px;
   border-top: 1px solid hsla(0,0%,100%,.05);
   backdrop-filter: blur(44px);
-  background: var(--neutral-1000)
+  background: var(--neutral-1000);
+  z-index: 80
 }
 .logout__btn {
   width: 100%
@@ -1106,6 +1123,57 @@ textarea.input {
 .s-support__form-submit {
   width: 100%;
   margin-top: 30px
+}
+.s-friends {
+  padding-bottom: 140px
+}
+.s-friends__body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  background: var(--neutral-900);
+  border-radius: 12px;
+  margin-bottom: 18px
+}
+.s-friends__stars {
+  display: flex;
+  align-items: start;
+  gap: 2px
+}
+.s-friends__stars svg {
+  width: 30px;
+  height: 30px
+}
+.s-friends__stars-get {
+  padding: 9px 28px;
+  background-color: rgba(22,117,219,.15);
+  border: none;
+  outline: 0;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -.06em;
+  color: var(--primary-300);
+  transition: color .2s ease,background-color .2s ease
+}
+.s-friends__invite {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 58px;
+  width: 100%;
+  backdrop-filter: blur(44px);
+  background: var(--neutral-1000);
+  padding: 16px 0;
+  border-top: 1px solid hsla(0,0%,100%,.05)
+}
+.s-friends__invite-btn {
+  width: 100%
 }
 .tab-bar {
   position: fixed;
@@ -1160,6 +1228,10 @@ textarea.input {
     color: var(--primary-300);
     border-color: var(--primary-300)
   }
+  .s-friends__stars-get:hover {
+    color: #fff;
+    background-color: #1675db
+  }
 }
 @media (hover:none) {
   .btn-simple:active {
@@ -1175,5 +1247,9 @@ textarea.input {
   .s-profile__bottom-btn:active {
     color: var(--primary-300);
     border-color: var(--primary-300)
+  }
+  .s-friends__stars-get:active {
+    color: #fff;
+    background-color: #1675db
   }
 }

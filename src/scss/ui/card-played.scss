@@ -3,4 +3,9 @@
   padding: 8px 16px;
   border-radius: 20px;
   background: var(--neutral-900);
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
 }
