@@ -245,6 +245,9 @@ img {
 .body._top-bg::after {
   background-position: top -130px center
 }
+.body._bottom-logout {
+  padding-bottom: 100px
+}
 :root {
   --offset-width: 15px;
   --container-width: calc(var(--content-width) + (var(--offset-width) * 2))
@@ -372,6 +375,11 @@ img {
   line-height: 150%;
   letter-spacing: -.06em
 }
+.title-2 {
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: 0
+}
 .hl-text {
   font-size: 19px;
   line-height: 126%;
@@ -413,6 +421,11 @@ img {
 }
 .text-red-l {
   color: var(--red-l)
+}
+.text-b {
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: -.01em
 }
 .text-hint {
   color: var(--hint)
@@ -933,6 +946,141 @@ img {
   width: 20px;
   height: 20px
 }
+.s-profile {
+  padding-top: 35px
+}
+.s-profile__avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover
+}
+.s-profile__nav {
+  display: flex;
+  border-radius: 9px;
+  padding: 2px;
+  background: var(--neutral-1000);
+  gap: 1px;
+  margin: 24px 0 16px 0
+}
+.s-profile__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+  padding: 5px;
+  border-radius: 7px;
+  min-height: 40px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: -.01em;
+  color: var(--neutral-800);
+  transition: box-shadow .2s ease,background-color .2s ease
+}
+.s-profile__nav-btn:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--neutral-900)
+}
+.s-profile__nav-btn._active {
+  font-weight: 600;
+  box-shadow: 0 3px 1px 0 rgba(0,0,0,.04),0 3px 8px 0 rgba(0,0,0,.12);
+  background-color: var(--neutral-900);
+  color: #fff
+}
+.s-profile__nav-btn._active::after {
+  display: none
+}
+.s-profile__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 40px
+}
+.s-profile__item {
+  display: flex;
+  gap: 6px;
+  width: 100%
+}
+.s-profile__item .s-porfile__cell {
+  flex: 1
+}
+.s-profile__cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80px;
+  padding: 8px;
+  border-radius: 20px;
+  flex: 1;
+  background: var(--neutral-1000)
+}
+.s-profile__cell._min {
+  min-height: 60px
+}
+.s-profile__cell._active-green {
+  background: rgba(124,221,99,.15)
+}
+.s-profile__cell._active-green div {
+  mix-blend-mode: screen
+}
+.s-profile__cell._active-red {
+  background: rgba(158,36,47,.4)
+}
+.s-profile__cell._active-red div {
+  mix-blend-mode: screen
+}
+.s-profile__cell svg {
+  width: 24px;
+  height: 24px
+}
+.s-profile__bottom {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px
+}
+.s-profile__bottom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  flex: 1;
+  border: 1px solid hsla(0,0%,100%,.1);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 129%;
+  letter-spacing: -.02em;
+  color: hsla(0,0%,100%,.95);
+  transition: color .2s ease,border-color .2s ease
+}
+.s-profile__bottom-btn svg {
+  width: 24px;
+  height: 24px
+}
+.logout {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  border-top: 1px solid hsla(0,0%,100%,.05);
+  backdrop-filter: blur(44px);
+  background: var(--neutral-1000)
+}
+.logout__btn {
+  width: 100%
+}
 .tab-bar {
   position: fixed;
   bottom: 0;
@@ -978,6 +1126,14 @@ img {
   .modal-close:hover {
     opacity: .7
   }
+  .s-profile__nav-btn:hover {
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,.04),0 3px 8px 0 rgba(0,0,0,.12);
+    background-color: var(--neutral-900)
+  }
+  .s-profile__bottom-btn:hover {
+    color: var(--primary-300);
+    border-color: var(--primary-300)
+  }
 }
 @media (hover:none) {
   .btn-simple:active {
@@ -985,5 +1141,13 @@ img {
   }
   .modal-close:active {
     opacity: .7
+  }
+  .s-profile__nav-btn:active {
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,.04),0 3px 8px 0 rgba(0,0,0,.12);
+    background-color: var(--neutral-900)
+  }
+  .s-profile__bottom-btn:active {
+    color: var(--primary-300);
+    border-color: var(--primary-300)
   }
 }

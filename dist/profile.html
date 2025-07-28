@@ -12,303 +12,99 @@
 </head>
 
 <body>
-	<div class="body _top-bg">
+	<div class="body _top-bg _bottom-logout">
 
 		<main>
-			<div class="head-profile">
+			<section class="s-profile">
 				<div class="container">
-					<div class="d-flex align-items-center justify-content-between gap-3 text-primary-300">
-						<div class="d-flex align-items-center gap-2">
-							<a href="#" class="head-profile__avatar">
-								<img src="img/avatar.jpg" alt="image">
-							</a>
-							<a href="#" class="head-profile__notifications">
-								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-bell'></use>
-								</svg>
-								<div class="head-profile__notifications-num text-primary-300">42</div>
-							</a>
+					<div class="d-flex align-items-center gap-3">
+						<img src="img/avatar.jpg" alt="image" class="s-profile__avatar" />
+						<div>
+							<h5 class="h-5 mb-2 fw-bold">@nickname</h5>
+							<div class="h-7 text-neutral-800 fw-medium">#12345678</div>
 						</div>
-						<div class="d-flex gap-2">
-							<div class="head-profile__sum-btn">
-								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-star'></use>
-								</svg>
-								<span class="hl-text fw-600">258</span>
+					</div>
+					<div class="s-profile__nav">
+						<a href="#" class="s-profile__nav-btn _active">Все время</a>
+						<a href="#" class="s-profile__nav-btn">День</a>
+						<a href="#" class="s-profile__nav-btn">Месяц</a>
+						<a href="#" class="s-profile__nav-btn">Год</a>
+					</div>
+					<div class="s-profile__grid">
+						<div class="s-profile__item">
+							<div class="s-profile__cell">
+								<div class="text-b mb-1 text-neutral-800">Количество ставок всего</div>
+								<div class="title-2 fw-semibold">212</div>
 							</div>
-							<div class="head-profile__sum-btn">
-								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-dollar'></use>
-								</svg>
-								<span class="hl-text fw-600">23000</span>
+						</div>
+						<div class="s-profile__item">
+							<div class="s-profile__cell _min _active-green">
+								<div class="sub-hl-text mb-1 text-neutral-200">Выиграно</div>
+								<div class="title-2 fw-semibold text-green-l">96</div>
+							</div>
+							<div class="s-profile__cell _min _active-red">
+								<div class="sub-hl-text mb-1 text-neutral-200">Проиграно</div>
+								<div class="title-2 fw-semibold text-red-l">116</div>
+							</div>
+						</div>
+						<div class="s-profile__item">
+							<div class="s-profile__cell">
+								<div class="sub-hl-text mb-1 text-neutral-800">Сумма всех ставок</div>
+								<div class="title-2 fw-semibold">$212</div>
+							</div>
+							<div class="s-profile__cell">
+								<div class="sub-hl-text mb-1 text-neutral-800">Всего выиграно</div>
+								<div class="title-2 fw-semibold text-green-l">$212</div>
+							</div>
+						</div>
+						<div class="s-profile__item">
+							<div class="s-profile__cell">
+								<div class="sub-hl-text mb-1 text-neutral-800">Получено бонусов</div>
+								<div class="d-flex gap-1 justify-content-center text-primary-300">
+									<div class="title-2 fw-semibold">258</div>
+									<svg>
+										<use xlink:href='img/icons/icons.svg#icon-star'></use>
+									</svg>
+								</div>
+							</div>
+							<div class="s-profile__cell">
+								<div class="sub-hl-text mb-1 text-neutral-800">Потрачено бонусов</div>
+								<div class="d-flex gap-1 justify-content-center text-primary-300">
+									<div class="title-2 fw-semibold">258</div>
+									<svg>
+										<use xlink:href='img/icons/icons.svg#icon-star'></use>
+									</svg>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<section class="s-bets">
-				<div class="container">
-					<div class="d-flex align-items-center justify-content-between gap-2 mb-4">
-						<h1 class="h-5 fw-bold">Ставки</h1>
-						<div class="s-bets__filters-btn" data-bs-toggle="modal" data-bs-target="#filters-modal">
+					<div class="s-profile__bottom">
+						<div class="s-profile__bottom-btn">
 							<svg>
-								<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+								<use xlink:href='img/icons/icons.svg#icon-instruction'></use>
 							</svg>
+							<span>Инструкция</span>
 						</div>
-					</div>
-					<div class="d-flex flex-column gap-3">
-						<div data-bs-toggle="modal" data-bs-target="#bet-modal-even" class="card-bet">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200">$230</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold text-green-l">60%</div>
-									<div class="caption text-green-l">НЕЧЕТ</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">40%</div>
-									<div class="caption text-hint">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet _green" data-bs-toggle="modal" data-bs-target="#bet-modal-win">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200 text-green-l">
-									$230
-								</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">60%</div>
-									<div class="caption">НЕЧЕТ</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter _active-green">
-									<div class="text fw-semibold text-dark">40%</div>
-									<div class="caption text-dark">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet _red" data-bs-toggle="modal" data-bs-target="#bet-modal-loss">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200 text-red-l">
-									$230
-								</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">60%</div>
-									<div class="caption">НЕЧЕТ</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter _active-red">
-									<div class="text fw-semibold text-dark">40%</div>
-									<div class="caption text-dark">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet" data-bs-toggle="modal" data-bs-target="#bet-modal">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200">ZERO</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold text-green-l">60%</div>
-									<div class="caption text-green-l">НЕЧЕТ</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">40%</div>
-									<div class="caption text-hint">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div data-bs-toggle="modal" data-bs-target="#bet-modal-even" class="card-bet">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200">$230</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold text-green-l">60%</div>
-									<div class="caption text-green-l">НЕЧЕТ</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">40%</div>
-									<div class="caption text-hint">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet _green" data-bs-toggle="modal" data-bs-target="#bet-modal-win">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200 text-green-l">
-									$230
-								</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">60%</div>
-									<div class="caption">НЕЧЕТ</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter _active-green">
-									<div class="text fw-semibold text-dark">40%</div>
-									<div class="caption text-dark">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet _red" data-bs-toggle="modal" data-bs-target="#bet-modal-loss">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200 text-red-l">
-									$230
-								</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">60%</div>
-									<div class="caption">НЕЧЕТ</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter _active-red">
-									<div class="text fw-semibold text-dark">40%</div>
-									<div class="caption text-dark">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet" data-bs-toggle="modal" data-bs-target="#bet-modal">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200">ZERO</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold text-green-l">60%</div>
-									<div class="caption text-green-l">НЕЧЕТ</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">40%</div>
-									<div class="caption text-hint">нечет</div>
-								</div>
-							</div>
+						<div class="s-profile__bottom-btn">
+							<svg>
+								<use xlink:href='img/icons/icons.svg#icon-question'></use>
+							</svg>
+							<span>Поддержка</span>
 						</div>
 					</div>
 				</div>
 			</section>
 
-		</main>
-		<footer class="tab-bar">
-			<div class="tab-bar__wrapper">
-				<a href="#" class="tab-bar__btn">
+			<div class="logout">
+				<a href="#" class="btn-dark logout__btn">
 					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-coins"></use>
+						<use xlink:href="img/icons/icons.svg#icon-arrow-prev"></use>
 					</svg>
-					<span>Ставки</span>
-				</a>
-				<a href="#" class="tab-bar__btn _active">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-clover"></use>
-					</svg>
-					<span>Розыгрыши</span>
-				</a>
-				<a href="#" class="tab-bar__btn">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-zap"></use>
-					</svg>
-					<span>Задания</span>
-				</a>
-				<a href="#" class="tab-bar__btn">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-friends"></use>
-					</svg>
-					<span>Друзья</span>
+					<span>Выйти</span>
 				</a>
 			</div>
-		</footer>
 
-		<script src="./files/bootstrap/bootstrap.min.js?_v=20250728111644"></script>
-
+		</main>
 	</div>
 	<div class="modal modal-filters fade" id="filters-modal">
 		<div class="modal-dialog modal-dialog-bottom">

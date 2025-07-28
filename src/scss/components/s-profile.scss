@@ -1,0 +1,148 @@
+.s-profile {
+  padding-top: 35px;
+  &__avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__nav {
+    display: flex;
+    border-radius: 9px;
+    padding: 2px;
+    background: var(--neutral-1000);
+    gap: 1px;
+    margin: 24px 0px 16px 0px;
+  }
+  &__nav-btn {
+    @include flex-center;
+    position: relative;
+    flex: 1;
+    padding: 5px;
+    border-radius: 7px;
+    min-height: 40px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: var(--neutral-800);
+
+    transition:
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+
+    @include hover {
+      box-shadow:
+        0 3px 1px 0 rgba(0, 0, 0, 0.04),
+        0 3px 8px 0 rgba(0, 0, 0, 0.12);
+      background-color: var(--neutral-900);
+    }
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: var(--neutral-900);
+      }
+    }
+
+    &._active {
+      font-weight: 600;
+      box-shadow:
+        0 3px 1px 0 rgba(0, 0, 0, 0.04),
+        0 3px 8px 0 rgba(0, 0, 0, 0.12);
+      background-color: var(--neutral-900);
+      color: white;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 40px;
+  }
+  &__item {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+
+    .s-porfile__cell {
+      flex: 1;
+    }
+  }
+  &__cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80px;
+    padding: 8px;
+    border-radius: 20px;
+    flex: 1;
+    background: var(--neutral-1000);
+
+    &._min {
+      min-height: 60px;
+    }
+
+    &._active-green {
+      background: rgba(124, 221, 99, 0.15);
+
+      div {
+        mix-blend-mode: screen;
+      }
+    }
+    &._active-red {
+      background: rgba(158, 36, 47, 0.4);
+
+      div {
+        mix-blend-mode: screen;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    gap: 8px;
+    margin-top: 40px;
+  }
+  &__bottom-btn {
+    @include flex-center;
+    gap: 10px;
+    padding: 13px;
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.95);
+
+    transition: color .2s ease, border-color .2s ease;
+    @include hover {
+      color: var(--primary-300);
+      border-color: var(--primary-300);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.logout {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(44px);
+  background: var(--neutral-1000);
+
+  &__btn {
+    width: 100%;
+  }
+}
