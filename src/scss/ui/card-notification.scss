@@ -1,0 +1,49 @@
+.card-notification {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+  background: var(--neutral-1000);
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: -20px;
+    bottom: -10px;
+    width: 145px;
+    opacity: 0.55;
+    filter: blur(15px);
+    background: linear-gradient(
+      270deg,
+      rgba(41, 144, 255, 0.25) 0%,
+      rgba(41, 144, 255, 0.25) 100%
+    );
+    z-index: -1;
+  }
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__time-circle {
+    margin-left: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--primary-300);
+  }
+  &__btn {
+    font-size: 16px !important;
+    padding: 6px 12px !important;
+    line-height: 150% !important;
+    letter-spacing: -0.06em !important;
+    margin-left: auto;
+  }
+}
