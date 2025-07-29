@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body>
+    <div class="body _dark">
+      <main>
+
+        <section class="py-4">
+          <div class="container">
+            <div class="d-flex flex-wrap gap-3">
+              <button data-bs-toggle="modal" data-bs-target="#filters-modal" class="btn-s"><span>Фильтры</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#bet-modal" class="btn-s"><span>Ставка</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#bet-modal-even" class="btn-s"><span>Ставка на четное</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#bet-modal-win" class="btn-s"><span>Победа</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#bet-modal-loss" class="btn-s"><span>Проигрыш</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#invite-friend" class="btn-s"><span>Пригласить друга</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#add-invite" class="btn-s"><span>Добавить инвайт</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#modal-up-balance" class="btn-s"><span>Пополнить баланс</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#modal-down-balance" class="btn-s"><span>Вывести баланс</span></button>
+              <button data-bs-toggle="modal" data-bs-target="#modal-get-wallet" class="btn-s"><span>Подключить кошелек</span></button>
+            </div>
+          </div>
+        </section>
+  
+      </main>
+      @@include('html/components/footer.html')
+    </div>
+    @@include('html/components/modals.html')
+    <script src="./files/bootstrap/bootstrap.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

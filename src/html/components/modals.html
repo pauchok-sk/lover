@@ -513,53 +513,6 @@
   </div>
 </div>
 
-<div class="modal modal-invite fade" id="invite-friend">
-  <div class="modal-dialog modal-dialog-bottom">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div
-          class="d-flex align-items-center justify-content-between gap-3 mb-4"
-        >
-          <div data-bs-dismiss="modal" class="modal-close ms-auto">
-            <svg>
-              <use xlink:href="img/icons/icons.svg#icon-close"></use>
-            </svg>
-          </div>
-        </div>
-        <div class="hl-text text-center text-neutral-200 mb-3 fw-semibold">
-          Пригласить друга
-        </div>
-        <div class="text-b-2 text-center mb-1 text-neutral-200">
-          За каждого друга будут начислены:
-        </div>
-        <div
-          class="text text-primary-300 d-flex align-items-center justify-content-center modal-invite__stars mb-4"
-        >
-          <span>258</span>
-          <svg>
-            <use xlink:href="img/icons/icons.svg#icon-star-bold"></use>
-          </svg>
-        </div>
-        <div class="modal-invite__body mb-4">
-          <div class="text-b-2 text-break text-neutral-200">
-            <a href="https://t.me/HoldSlavesBot/?startapp=Nzk5NjMxOTI5">
-              https://t.me/HoldSlavesBot/?startapp=Nzk5NjMxOTI5
-            </a>
-          </div>
-          <button
-            data-copy="https://t.me/HoldSlavesBot/?startapp=Nzk5NjMxOTI5"
-            data-text="Copied"
-            class="modal-invite__modal-btn"
-          >
-            Copy
-          </button>
-        </div>
-        <button class="btn-s w-100"><span>Пригласить</span></button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="modal modal-invite fade" id="add-invite">
   <div class="modal-dialog modal-dialog-bottom">
     <div class="modal-content">
@@ -592,6 +545,148 @@
           <button class="modal-invite__modal-btn">Инвайты</button>
         </div>
         <button class="btn-s w-100"><span>Пригласить</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-balance fade" id="modal-up-balance">
+  <div class="modal-dialog modal-dialog-bottom">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div
+          class="d-flex align-items-center justify-content-between gap-3 mb-4"
+        >
+          <div data-bs-dismiss="modal" class="modal-close ms-auto">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-close"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="hl-text text-center text-neutral-200 fw-semibold">
+          Пополнение баланса
+        </div>
+        <div class="modal-balance__id">
+          <div class="h-7 text-neutral-200 mb-2">EQC6...L0fa</div>
+          <div class="modal-balance__id-sub text-neutral-800">Подключенный кошелек</div>
+        </div>
+        <form action="#" class="modal-balance__form">
+          <div class="text text-primary-100 mb-2">Сумма пополнения</div>
+          <div class="input-control modal-balance__input-control">
+            <input type="number" value="1" class="input">
+            <div class="d-flex align-items-center modal-balance__input-nav">
+              <img src="@img/icon-ton.svg" alt="icon">
+            </div>
+          </div>
+          <button type="submit" class="btn-s modal-balanc__form-submit w-100 mt-4">
+            <svg>
+              <use xlink:href='img/icons/icons.svg#icon-coins'></use>
+            </svg>
+            <span>Пополнить</span>
+          </button>
+        </form>
+        <button data-bs-dismiss="modal" class="btn-dark w-100 mt-4">
+          <svg>
+            <use xlink:href='img/icons/icons.svg#icon-arrow-prev'></use>
+          </svg>
+          <span>Выйти</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-balance fade" id="modal-down-balance">
+  <div class="modal-dialog modal-dialog-bottom">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div
+          class="d-flex align-items-center justify-content-between gap-3 mb-4"
+        >
+          <div data-bs-dismiss="modal" class="modal-close ms-auto">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-close"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="hl-text text-center text-neutral-200 fw-semibold">
+          Вывод
+        </div>
+        <div class="modal-balance__id">
+          <div class="h-7 text-neutral-200 mb-2">EQC6...L0fa</div>
+          <div class="modal-balance__id-sub text-neutral-800">Подключенный кошелек</div>
+        </div>
+        <form action="#" class="modal-balance__form">
+          <div class="text text-primary-100 mb-2">Сумма пополнения</div>
+          <div class="input-control modal-balance__input-control">
+            <input type="number" value="1" class="input">
+            <div class="d-flex align-items-center modal-balance__input-nav">
+              <img src="@img/icon-ton.svg" alt="icon">
+              <div data-count-input="4000" class="modal-balance__input-btn">MAX</div>
+            </div>
+          </div>
+          <button type="submit" class="btn-s modal-balanc__form-submit w-100 mt-4">
+            <svg>
+              <use xlink:href='img/icons/icons.svg#icon-coins'></use>
+            </svg>
+            <span>Вывести</span>
+          </button>
+        </form>
+        <button data-bs-dismiss="modal" class="btn-dark w-100 mt-4">
+          <svg>
+            <use xlink:href='img/icons/icons.svg#icon-arrow-prev'></use>
+          </svg>
+          <span>Выйти</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-balance fade" id="modal-get-wallet">
+  <div class="modal-dialog modal-dialog-bottom">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div
+          class="d-flex align-items-center justify-content-between gap-3 mb-4"
+        >
+          <div data-bs-dismiss="modal" class="modal-close ms-auto">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-close"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="hl-text text-center text-neutral-200 fw-semibold">
+          Вывод
+        </div>
+        <button class="btn-o w-100 my-4">
+          <span>ПОДКЛЮЧИТЬ КОШЕЛЕК</span>
+          <svg>
+            <use xlink:href='img/icons/icons.svg#icon-ton'></use>
+          </svg>
+        </button>
+        <form action="#" class="modal-balance__form">
+          <div class="text text-primary-100 mb-2">Сумма пополнения</div>
+          <div class="input-control modal-balance__input-control">
+            <input type="number" value="1" class="input">
+            <div class="d-flex align-items-center modal-balance__input-nav">
+              <img src="@img/icon-ton.svg" alt="icon">
+              <div data-count-input="4000" class="modal-balance__input-btn">MAX</div>
+            </div>
+          </div>
+          <button type="submit" class="btn-s modal-balanc__form-submit w-100 mt-4">
+            <svg>
+              <use xlink:href='img/icons/icons.svg#icon-coins'></use>
+            </svg>
+            <span>Вывести</span>
+          </button>
+        </form>
+        <button data-bs-dismiss="modal" class="btn-dark w-100 mt-4">
+          <svg>
+            <use xlink:href='img/icons/icons.svg#icon-arrow-prev'></use>
+          </svg>
+          <span>Выйти</span>
+        </button>
       </div>
     </div>
   </div>

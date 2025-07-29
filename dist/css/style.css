@@ -152,6 +152,7 @@ template {
   --primary-500: #004da1;
   --primary-400: #006ee4;
   --primary-300: #2990ff;
+  --primary-100: #b8daff;
   --primary-dark: #053c79;
   --dark: #212121;
   --neutral-1000: #121314;
@@ -242,6 +243,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding: 20px 30px;
   border-radius: 16px;
   border: none;
@@ -289,6 +291,11 @@ img {
   -webkit-text-fill-color: transparent;
   text-shadow: 0 1px 4px rgba(0,0,0,.1)
 }
+.btn-s svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-100)
+}
 .btn-dark {
   display: flex;
   align-items: center;
@@ -332,6 +339,31 @@ img {
   letter-spacing: -.02em;
   color: var(--primary-300);
   transition: color .2s ease
+}
+.btn-o {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  outline: 0;
+  border-radius: 10px;
+  background-color: rgba(22,117,219,.15);
+  font-size: 16px;
+  line-height: 112%;
+  letter-spacing: -.06em;
+  text-align: center;
+  color: var(--primary-300);
+  transition: color .2s ease,background-color .2s ease
+}
+.btn-o svg {
+  width: 15px;
+  height: 15px
 }
 .list {
   padding-left: 0;
@@ -390,6 +422,9 @@ img {
 }
 .text-primary-300 {
   color: var(--primary-300)
+}
+.text-primary-100 {
+  color: var(--primary-100)
 }
 .text-neutral-800 {
   color: var(--neutral-800)!important
@@ -836,6 +871,45 @@ textarea.input {
   letter-spacing: -.06em;
   color: var(--primary-300);
   transition: background-color .2s ease,color .2s ease
+}
+.modal-balance__id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 6px;
+  background-color: var(--neutral-900);
+  border-radius: 12px;
+  text-align: center;
+  margin: 24px 0
+}
+.modal-balance__id-sub {
+  mix-blend-mode: screen;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: -.01em;
+  text-transform: uppercase
+}
+.modal-balance__input-control .input {
+  padding-right: 100px!important
+}
+.modal-balance__input-nav {
+  position: absolute;
+  right: 5px
+}
+.modal-balance__input-nav img {
+  margin-right: 10px
+}
+.modal-balance__input-btn {
+  padding: 6px 12px;
+  background-color: rgba(22,117,219,.15);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -.06em;
+  color: var(--primary-300);
+  transition: color .2s ease,background-color .2s ease
 }
 .head-profile {
   padding-top: 35px
@@ -1335,6 +1409,10 @@ textarea.input {
   .btn-simple:hover {
     color: var(--primary-400)
   }
+  .btn-o:hover {
+    color: #fff;
+    background-color: #1675db
+  }
   .text-b-2 a:hover {
     text-decoration: underline
   }
@@ -1342,6 +1420,10 @@ textarea.input {
     opacity: .7
   }
   .modal-invite__modal-btn:hover {
+    color: #fff;
+    background-color: #1675db
+  }
+  .modal-balance__input-btn:hover {
     color: #fff;
     background-color: #1675db
   }
@@ -1362,6 +1444,10 @@ textarea.input {
   .btn-simple:active {
     color: var(--primary-400)
   }
+  .btn-o:active {
+    color: #fff;
+    background-color: #1675db
+  }
   .text-b-2 a:active {
     text-decoration: underline
   }
@@ -1369,6 +1455,10 @@ textarea.input {
     opacity: .7
   }
   .modal-invite__modal-btn:active {
+    color: #fff;
+    background-color: #1675db
+  }
+  .modal-balance__input-btn:active {
     color: #fff;
     background-color: #1675db
   }

@@ -8,6 +8,7 @@
 }
 .btn-s {
   @include flex-center;
+  gap: 10px;
   padding: 20px 30px;
   border-radius: 16px;
   border: none;
@@ -72,7 +73,6 @@
         0 0 30px rgba(255, 255, 255, 0.5) !important;
     }
   }
-
   &._dark {
     background: rgba(255, 255, 255, 0.08);
     box-shadow: none;
@@ -88,6 +88,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-100);
   }
 }
 
@@ -132,8 +138,40 @@
   letter-spacing: -0.02em;
   color: var(--primary-300);
 
-  transition: color .2s ease;
+  transition: color 0.2s ease;
   @include hover {
     color: var(--primary-400);
+  }
+}
+
+.btn-o {
+  @include flex-center;
+  gap: 15px;
+  cursor: pointer;
+  padding: 20px;
+  width: fit-content;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgba(22, 117, 219, 0.15);
+
+  font-size: 16px;
+  line-height: 112%;
+  letter-spacing: -0.06em;
+  text-align: center;
+  color: var(--primary-300);
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+
+  @include hover {
+    color: white;
+    background-color: rgba(22, 117, 219);
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
   }
 }

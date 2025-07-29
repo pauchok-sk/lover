@@ -12,81 +12,22 @@
 </head>
 
 <body>
-	<div class="body _default-bg">
-
+	<div class="body _dark">
 		<main>
 
-			<div class="head-profile">
+			<section class="py-4">
 				<div class="container">
-					<div class="d-flex align-items-center justify-content-between gap-3 text-primary-300">
-						<div class="d-flex align-items-center gap-2">
-							<a href="#" class="head-profile__avatar">
-								<img src="img/avatar.jpg" alt="image">
-							</a>
-							<a href="#" class="head-profile__notifications">
-								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-bell'></use>
-								</svg>
-								<div class="head-profile__notifications-num text-primary-300">42</div>
-							</a>
-						</div>
-						<div class="d-flex gap-2">
-							<div class="head-profile__sum-btn">
-								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-star'></use>
-								</svg>
-								<span class="hl-text fw-600">258</span>
-							</div>
-							<div class="head-profile__sum-btn">
-								<svg>
-									<use xlink:href='img/icons/icons.svg#icon-dollar'></use>
-								</svg>
-								<span class="hl-text fw-600">23000</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<section class="main-bet">
-				<div class="container">
-					<div class="main-bet__card _green" style="
-                background: url(&quot;img/bg-bet-green.png&quot;) top 0 center / 545px auto
-                  no-repeat;
-              ">
-						<div class="main-bet__gallery">
-							<img src="img/icon-bet-green.png" alt="image" />
-						</div>
-						<div class="main-bet__body">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="main-bet__id caption text-neutral-800 main-bet__info-item">
-									№892345
-								</div>
-								<div class="hl-text text-green-l fw-semibold">$230</div>
-								<div class="d-flex align-items-center gap-2 text-neutral-500 main-bet__info-item">
-									<div class="sub-hl-text ms-auto fw-semibold">12 Ноя</div>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
-								</div>
-							</div>
-							<div class="main-bet__counters">
-								<div disabled class="main-bet__counter _active-green">
-									<div class="text text-neutral-200 fw-semibold">60%</div>
-									<div class="caption text-neutral-800">ЧЕТ</div>
-								</div>
-								<div class="main-bet__counter">
-									<div class="text text-neutral-200 fw-semibold">12 456</div>
-									<div class="caption text-neutral-800">ВСЕГО</div>
-								</div>
-								<div class="main-bet__counter">
-									<div class="text text-neutral-200 fw-semibold">40%</div>
-									<div class="caption text-neutral-800">нечет</div>
-								</div>
-							</div>
-							<div class="main-bet__buttons">
-								<button disabled class="btn-s main-bet__btn _green"><span>Выпало Четное</span></button>
-							</div>
-						</div>
+					<div class="d-flex flex-wrap gap-3">
+						<button data-bs-toggle="modal" data-bs-target="#filters-modal" class="btn-s"><span>Фильтры</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#bet-modal" class="btn-s"><span>Ставка</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#bet-modal-even" class="btn-s"><span>Ставка на четное</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#bet-modal-win" class="btn-s"><span>Победа</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#bet-modal-loss" class="btn-s"><span>Проигрыш</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#invite-friend" class="btn-s"><span>Пригласить друга</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#add-invite" class="btn-s"><span>Добавить инвайт</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#modal-up-balance" class="btn-s"><span>Пополнить баланс</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#modal-down-balance" class="btn-s"><span>Вывести баланс</span></button>
+						<button data-bs-toggle="modal" data-bs-target="#modal-get-wallet" class="btn-s"><span>Подключить кошелек</span></button>
 					</div>
 				</div>
 			</section>
