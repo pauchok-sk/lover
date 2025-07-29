@@ -1,0 +1,42 @@
+.card-story {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--neutral-1000);
+  overflow: hidden;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    width: 140px;
+    background: linear-gradient(
+      270deg,
+      rgba(41, 144, 255, 0.45) 0%,
+      rgba(41, 144, 255, 0.15) 100%
+    );
+    opacity: 0.45;
+    filter: blur(12px);
+    z-index: -1;
+  }
+  &__title {
+    min-width: 82px;
+    text-align: center;
+  }
+  &__id {
+    padding: 4px 8px;
+    border-radius: 10px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    background: var(--neutral-900);
+  }
+  &__date {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

@@ -15,6 +15,7 @@
 @import "./ui/mini-ui";
 @import "./ui/card-played";
 @import "./ui/bet-placed";
+@import "./ui/card-story";
 
 // widgets
 @import "./widgets/modal";
@@ -32,5 +33,7 @@
 @import "./components/logout";
 @import "./components/s-support";
 @import "./components/s-friends";
+@import "./components/s-balance";
+@import "./components/balance-nav";
 
 @import "./components/tab-bar";

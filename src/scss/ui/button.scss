@@ -73,6 +73,11 @@
     }
   }
 
+  &._dark {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+  }
+
   span {
     font-weight: 400;
     font-size: 20px;

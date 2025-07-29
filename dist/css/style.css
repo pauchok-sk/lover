@@ -215,6 +215,9 @@ img {
 .body._bottom-logout {
   padding-bottom: 100px
 }
+.body._bottom-balance {
+  padding-bottom: 92px
+}
 .body._dark {
   background-color: var(--secondary-dark)
 }
@@ -270,6 +273,10 @@ img {
 }
 .btn-s._green span {
   text-shadow: 0 0 4px rgba(202,217,255,.32),0 0 25px hsla(0,0%,100%,.5),0 0 30px hsla(0,0%,100%,.5)!important
+}
+.btn-s._dark {
+  background: hsla(0,0%,100%,.08);
+  box-shadow: none
 }
 .btn-s span {
   font-weight: 400;
@@ -411,6 +418,10 @@ img {
   font-size: 14px;
   line-height: 150%;
   letter-spacing: -.07em
+}
+.text-b-3 {
+  font-size: 10px;
+  line-height: 150%
 }
 .text-hint {
   color: var(--hint)
@@ -711,6 +722,42 @@ textarea.input {
 }
 .bet-placed._active-red {
   background: rgba(158,36,47,.15)
+}
+.card-story {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--neutral-1000);
+  overflow: hidden;
+  z-index: 1
+}
+.card-story::after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  width: 140px;
+  background: linear-gradient(270deg,rgba(41,144,255,.45) 0,rgba(41,144,255,.15) 100%);
+  opacity: .45;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+  z-index: -1
+}
+.card-story__title {
+  min-width: 82px;
+  text-align: center
+}
+.card-story__id {
+  padding: 4px 8px;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px 0 rgba(0,0,0,.05);
+  background: var(--neutral-900)
+}
+.card-story__date svg {
+  width: 16px;
+  height: 16px
 }
 .modal-dialog.modal-dialog-bottom {
   display: flex;
@@ -1205,6 +1252,46 @@ textarea.input {
 }
 .s-friends__invite-btn {
   width: 100%
+}
+.s-balance {
+  padding: 40px 0
+}
+.s-balance__counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--neutral-900);
+  margin-bottom: 35px
+}
+.s-balance__counter svg {
+  width: 34px;
+  height: 34px
+}
+.s-balance__stories-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.balance-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  backdrop-filter: blur(44px);
+  background: var(--neutral-1000);
+  z-index: 100
+}
+.balance-nav__wrapper {
+  display: flex;
+  gap: 8px
+}
+.balance-nav__btn {
+  flex: 1
 }
 .tab-bar {
   position: fixed;

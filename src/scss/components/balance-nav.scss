@@ -1,0 +1,17 @@
+.balance-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  backdrop-filter: blur(44px);
+  background: var(--neutral-1000);
+  z-index: 100;
+  &__wrapper {
+    display: flex;
+    gap: 8px;
+  }
+  &__btn {
+    flex: 1;
+  }
+}

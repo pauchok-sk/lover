@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -12,9 +12,10 @@
 </head>
 
 <body>
-	<div class="body _top-bg">
+	<div class="body _bottom-balance">
 
 		<main>
+
 			<div class="head-profile">
 				<div class="container">
 					<div class="d-flex align-items-center justify-content-between gap-3 text-primary-300">
@@ -46,230 +47,210 @@
 					</div>
 				</div>
 			</div>
-			<section class="s-bets">
+			<section class="s-balance">
 				<div class="container">
-					<div class="d-flex align-items-center justify-content-between gap-2 mb-4">
-						<h1 class="h-5 fw-bold">Ставки</h1>
-						<div class="s-bets__filters-btn" data-bs-toggle="modal" data-bs-target="#filters-modal">
+					<h1 class="h-5 fw-bold mb-4">Игровой баланс</h1>
+					<div class="s-balance__counter">
+						<div class="hl-text text-neutral-200 fw-semibold">Доступно</div>
+						<div class="d-flex align-items-center text-primary-300 fw-semibold">
+							<div class="title-1">4000</div>
 							<svg>
-								<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+								<use xlink:href="img/icons/icons.svg#icon-dollar"></use>
 							</svg>
 						</div>
 					</div>
-					<div class="d-flex flex-column gap-3">
-						<div data-bs-toggle="modal" data-bs-target="#bet-modal-even" class="card-bet">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200">$230</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
+					<div class="s-balance__stories">
+						<h2 class="text fw-semibold mb-3">История</h2>
+
+						<div class="s-balance__stories-body">
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-green-l fw-semibold">+$1000</div>
+								</div>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold text-green-l">60%</div>
-									<div class="caption text-green-l">НЕЧЕТ</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-red-l fw-semibold">-$1000</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">40%</div>
-									<div class="caption text-hint">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet _green" data-bs-toggle="modal" data-bs-target="#bet-modal-win">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200 text-green-l">
-									$230
-								</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">60%</div>
-									<div class="caption">НЕЧЕТ</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-green-l fw-semibold">+$1000</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter _active-green">
-									<div class="text fw-semibold text-dark">40%</div>
-									<div class="caption text-dark">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet _red" data-bs-toggle="modal" data-bs-target="#bet-modal-loss">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200 text-red-l">
-									$230
-								</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">60%</div>
-									<div class="caption">НЕЧЕТ</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-red-l fw-semibold">-$1000</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter _active-red">
-									<div class="text fw-semibold text-dark">40%</div>
-									<div class="caption text-dark">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet" data-bs-toggle="modal" data-bs-target="#bet-modal">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200">ZERO</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold text-green-l">60%</div>
-									<div class="caption text-green-l">НЕЧЕТ</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-green-l fw-semibold">+$1000</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">40%</div>
-									<div class="caption text-hint">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div data-bs-toggle="modal" data-bs-target="#bet-modal-even" class="card-bet">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200">$230</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold text-green-l">60%</div>
-									<div class="caption text-green-l">НЕЧЕТ</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-red-l fw-semibold">-$1000</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">40%</div>
-									<div class="caption text-hint">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet _green" data-bs-toggle="modal" data-bs-target="#bet-modal-win">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200 text-green-l">
-									$230
-								</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">60%</div>
-									<div class="caption">НЕЧЕТ</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-green-l fw-semibold">+$1000</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter _active-green">
-									<div class="text fw-semibold text-dark">40%</div>
-									<div class="caption text-dark">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet _red" data-bs-toggle="modal" data-bs-target="#bet-modal-loss">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200 text-red-l">
-									$230
-								</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">60%</div>
-									<div class="caption">НЕЧЕТ</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-red-l fw-semibold">-$1000</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
-								</div>
-								<div class="card-bet__counter _active-red">
-									<div class="text fw-semibold text-dark">40%</div>
-									<div class="caption text-dark">нечет</div>
-								</div>
-							</div>
-						</div>
-						<div class="card-bet" data-bs-toggle="modal" data-bs-target="#bet-modal">
-							<div class="d-flex align-items-center justify-content-between gap-2 mb-3">
-								<div class="card-bet__id caption text-neutral-800">№892345</div>
-								<div class="hl-text fw-semibold text-neutral-200">ZERO</div>
-								<div class="timer">
-									<span>21h:49m</span>
-									<svg>
-										<use xlink:href="img/icons/icons.svg#icon-timer"></use>
-									</svg>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="card-bet__counters">
-								<div class="card-bet__counter">
-									<div class="text fw-semibold text-green-l">60%</div>
-									<div class="caption text-green-l">НЕЧЕТ</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-green-l fw-semibold">+$1000</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">12 456</div>
-									<div class="caption text-hint">ВСЕГО</div>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
-								<div class="card-bet__counter">
-									<div class="text fw-semibold">40%</div>
-									<div class="caption text-hint">нечет</div>
+							</div>
+							<div class="card-story">
+								<div class="d-flex align-items-center justify-content-between mb-3">
+									<div class="card-story__title h-7 fw-medium text-neutral-200">
+										Спонсор
+									</div>
+									<div class="hl-text text-red-l fw-semibold">-$1000</div>
+								</div>
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="card-story__id text-b-3 text-neutral-800">
+										TRANZ892345
+									</div>
+									<div class="d-flex align-items-center gap-1 text-neutral-800 card-story__date">
+										<div class="text-b">12 Ноя</div>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#icon-calendar"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -277,40 +258,17 @@
 				</div>
 			</section>
 
+
 		</main>
-		<footer class="tab-bar">
-			<div class="tab-bar__wrapper">
-				<a href="#" class="tab-bar__btn">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-coins"></use>
-					</svg>
-					<span>Ставки</span>
-				</a>
-				<a href="#" class="tab-bar__btn _active">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-clover"></use>
-					</svg>
-					<span>Розыгрыши</span>
-				</a>
-				<a href="#" class="tab-bar__btn">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-zap"></use>
-					</svg>
-					<span>Задания</span>
-				</a>
-				<a href="#" class="tab-bar__btn">
-					<svg>
-						<use xlink:href="img/icons/icons.svg#icon-friends"></use>
-					</svg>
-					<span>Друзья</span>
-				</a>
+		<div class="balance-nav">
+			<div class="balance-nav__wrapper">
+				<button class="btn-s balance-nav__btn"><span>Пополнить</span></button>
+				<button class="btn-s balance-nav__btn _dark"><span>Вывести</span></button>
 			</div>
-		</footer>
+		</div>
 
-		<script src="./files/bootstrap/bootstrap.min.js?_v=20250729110503"></script>
-
+		<script src="js/app.min.js?_v=20250729110503"></script>
 	</div>
-	<script src="js/app.min.js?_v=20250729110503"></script>
 	<div class="modal modal-filters fade" id="filters-modal">
 		<div class="modal-dialog modal-dialog-bottom">
 			<div class="modal-content">
