@@ -175,3 +175,32 @@
     height: 15px;
   }
 }
+
+.btn-outline {
+  @include flex-center;
+  cursor: pointer;
+  gap: 10px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 20px;
+  width: fit-content;
+  outline: none;
+
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  color: var(--neutral-200);
+
+  transition: border-color .2s ease, color .2s ease;
+  @include hover {
+    border-color: var(--primary-300);
+    color: var(--primary-300);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body>
+    <div class="body _bottom-balance">
+      @@include('html/components/header.html')
+      <main>
+        
+        @@include('html/components/head-profile.html')
+        @@include('html/components/s-bonuse.html')
+  
+      </main>
+      <div class="balance-nav">
+        <div class="balance-nav__wrapper">
+          <button
+            data-bs-toggle="modal"
+            data-bs-target="#modal-up-balance"
+            class="btn-s balance-nav__btn"
+          >
+            <span>Пополнить</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    @@include('html/components/modals.html')
+    <script src="./files/bootstrap/bootstrap.min.js"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
