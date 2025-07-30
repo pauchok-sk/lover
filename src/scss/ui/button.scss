@@ -84,7 +84,7 @@
     font-size: 20px;
     line-height: 100%;
     letter-spacing: -0.04em;
-    background: linear-gradient(180deg, #d5e9ff 35.34%, #fff 82.1%);
+    background: linear-gradient(0deg, #d5e9ff 100.34%, #fff 26.1%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,7 +126,7 @@
   }
 
   &._primary {
-    color: var(--primary-300)
+    color: var(--primary-300);
   }
 }
 
@@ -198,7 +198,9 @@
   letter-spacing: -0.02em;
   color: var(--neutral-200);
 
-  transition: border-color .2s ease, color .2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
   @include hover {
     border-color: var(--primary-300);
     color: var(--primary-300);
