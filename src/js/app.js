@@ -7,9 +7,9 @@ collectStars();
 copy();
 countInput();
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   var myModal = new bootstrap.Modal(
-//     document.getElementById("modal-get-wallet")
-//   );
-//   myModal.show();
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  var myModal = new bootstrap.Modal(
+    document.getElementById("placed-bet")
+  );
+  // myModal.show();
+});

@@ -23,6 +23,7 @@
     #2280e7 52.17%,
     #116ed6 69.67%
   );
+  font-family: "SFProText", sans-serif;
 
   transition: opacity 0.2s ease;
 
@@ -122,6 +123,10 @@
   svg {
     width: 24px;
     height: 24px;
+  }
+
+  &._primary {
+    color: var(--primary-300)
   }
 }
 

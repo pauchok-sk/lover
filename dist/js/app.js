@@ -58,4 +58,7 @@
     collectStars();
     copy();
     countInput();
+    document.addEventListener("DOMContentLoaded", function() {
+        new bootstrap.Modal(document.getElementById("placed-bet"));
+    });
 })();

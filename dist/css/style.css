@@ -251,6 +251,7 @@ img {
   outline: 0;
   box-shadow: inset 0 0 1px 0 #04062b,inset 0 -2px 2px 1px rgba(11,14,81,.47),inset 0 6px 5px 0 hsla(0,0%,100%,.1);
   background: linear-gradient(180deg,#1875dc 33.76%,#2280e7 52.17%,#116ed6 69.67%);
+  font-family: SFProText,sans-serif;
   transition: opacity .2s ease
 }
 .btn-s:active {
@@ -323,6 +324,9 @@ img {
 .btn-dark svg {
   width: 24px;
   height: 24px
+}
+.btn-dark._primary {
+  color: var(--primary-300)
 }
 .btn-simple {
   display: flex;
@@ -718,6 +722,9 @@ textarea.input {
   background-color: var(--neutral-900);
   z-index: -1
 }
+.counters._r-100::before {
+  right: 100px
+}
 .counter {
   text-align: center;
   min-width: 80px;
@@ -746,6 +753,9 @@ textarea.input {
 .counter._active div {
   mix-blend-mode: screen
 }
+.counter._active-light {
+  background-color: rgba(0,110,228,.1)
+}
 .counter._active-green {
   background-color: var(--green)
 }
@@ -757,6 +767,11 @@ textarea.input {
 }
 .counter._active-red div {
   mix-blend-mode: screen
+}
+.item-bet {
+  padding: 8px 16px;
+  background-color: rgba(22,117,219,.15);
+  border-radius: 20px
 }
 .card-played {
   display: flex;
